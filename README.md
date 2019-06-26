@@ -11,7 +11,7 @@ En esa [presentación](https://github.com/LatinR/presentaciones-LatinR2018/blob/
 
 En un principio utilicé R para generar el listado de palabras, pero no para generar la nube; como soy una R-Lady no podía dejar de intentar realizar todo el proceso utilizando R. 
 
-Aqui cuento como hice esa nube de palabras usando el paquete **meetupr**, *desarrollado por R-Ladies*.
+Aquí cuento como hice esa nube de palabras usando el paquete **meetupr**, *desarrollado por R-Ladies*.
 
 ## Nube de palabras con los meetups de RLadies
 
@@ -79,7 +79,7 @@ slowly <- function(f, delay = 0.5) {
   
 }
 ```
-Finalmente, se debe prepar un listado de *stop words* en varios idiomas (R-Ladies está presente en más de 40 países) para sacarlos de la nube de palabras (¿Se podrá hacer de manera más sencilla?).  Las *stop wors* son palabras como artículos, preposiciones, conectores, por ejemplo: *la*, *el*, *con*, etc.
+Finalmente, se debe preparar un listado de *stop words* en varios idiomas (R-Ladies está presente en más de 40 países) para sacarlos de la nube de palabras (¿Se podrá hacer de manera más sencilla?).  Las *stop wors* son palabras como artículos, preposiciones, conectores, por ejemplo: *la*, *el*, *con*, etc.
 ```
 idiomas <- list('spanish', 'portuguese', 'french', 'danish', 'dutch', 'finnish', 'german', 'hungarian', 'italian', 'norwegian', 'russian', 'swedish')
 
@@ -146,7 +146,7 @@ wordcloud2(names, size = 1, minRotation = -pi/6, maxRotation = -pi/6,
 
 ## Con forma de R
 
-Ahora el desafío fue darle la forma de la letra **R**, los primeros intentos no funcionarion, pero se resolvió instalando el paquete wordcloud2 desde github y no desde CRAN, el código cambia la función a utilizar:
+Ahora el desafío fue darle la forma de la letra **R**, los primeros intentos no funcionaron, pero se resolvió instalando el paquete wordcloud2 desde github y no desde CRAN, el código cambia la función a utilizar:
 
 ```
 letterCloud(names,  word = "R", color='random-light', backgroundColor="#223564")
@@ -167,7 +167,7 @@ names <- nombres[!is_ok] %>%
 
 colorlist <- c('#f7e4be', '#f0f4bc', '#9a80a4', '#848da6')
 ```
-Como hay que repetir los colores por la cantidad de palabras que se deben graficar, utilizamos este código (el número está puesto a a mano para probar, en el To Do List: realizar el calculo por la cantidad de palabras)
+Como hay que repetir los colores por la cantidad de palabras que se deben graficar, utilizamos este código (el número está puesto a mano para probar, en el To Do List: realizar el calculo por la cantidad de palabras)
 ```
 colores <- rep(list(colorlist), 68) 
 colorlist <- unlist(colores)
@@ -180,7 +180,7 @@ y... aquí está:
 
 ![alt tag](https://github.com/yabellini/NubeDePalabras/blob/master/RConColoresLatinR.png)
 
-Esta opción es la que mas se parece a la R original utilizada en la presentación (nada mal!)
+Esta opción es la que más se parece a la R original utilizada en la presentación (nada mal!)
 
 Finalmente, este código busca dar la forma de la nube de palabras de acuerdo a una imagen, pero sigue sin funcionar:
 ```
